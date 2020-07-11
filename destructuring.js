@@ -22,9 +22,10 @@ var carDetails = {
 */
 
 //Code Here
-
-
-
+const {color} = carDetails
+const {make} = carDetails
+const {model} = carDetails
+const {year} = carDetails
 ////////// PROBLEM 2 //////////
 
 /*
@@ -32,18 +33,15 @@ var carDetails = {
   Use object destructuring to save the object properties to new variables. 
   The property names are firstName, lastName, and title.
 */
-
 function greeting( obj ) {
   //Code Here
-  
+  const {title, firstName, lastName} = obj
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
 }
 
-
-
-////////// PROBLEM 3 //////////
+////////// PROBLEM 3 //////////3
 
 /*
   Write a function called totalPopulation that will take in an object.
@@ -55,7 +53,19 @@ function greeting( obj ) {
 
 //Code Here
 
+const statePop = {
+  utah: 1,
+  california: 2,
+  texas: 3,
+  arizona: 4
+}
 
+const totalPopulation = (statePop) => {
+  const {utah, california, texas, arizona} = statePop
+  const total = utah + california + texas + arizona
+  return total 
+}
+totalPopulation(statePop)
 
 ////////// PROBLEM 4 //////////
 
@@ -68,8 +78,19 @@ function greeting( obj ) {
 */
 
 //Code Here
+const macro = {
+  carb: "pasta",
+  fat: "butter",
+  protein: "chicken"
+}
 
+const ingredients = (macro) => {
+  const {carb, fat, protein} = macro
+  const mixture = []
+  macro.push(mixture)
+} 
 
+ingredients(mixture)
 
 ////////// PROBLEM 5 //////////
 
@@ -87,7 +108,11 @@ function greeting( obj ) {
 
 //Code Here
 
+let largeNumbers = ({first, second, third}) => {
+  return first
+}
 
+largeNumbers({first: 22, second: 55, third: 99})
 
 ////////// PROBLEM 6 //////////
 
@@ -98,5 +123,9 @@ function greeting( obj ) {
 */
 
 //Code Here
+let numberGroups = ({a, b, c}) => {
+  return [a, b, c]
+}
 
+numberGroups({a: [2,6,8,5,3]}, b: [5,7,3,2], c: [2,7])
 
