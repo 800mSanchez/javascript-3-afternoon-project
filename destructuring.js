@@ -126,6 +126,3 @@ largeNumbers({first: 22, second: 55, third: 99})
 let numberGroups = ({a, b, c}) => {
   return [a, b, c]
 }
-
-numberGroups({a: [2,6,8,5,3]}, b: [5,7,3,2], c: [2,7])
-

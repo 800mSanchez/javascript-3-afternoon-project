@@ -21,14 +21,8 @@ const mixedNumbers = [6,3,1,7,5,2,6,8,9,4,2,7,9,3,1,8,4,3];
 */
 
 //Code Here
-const evenFinder = (mixedNumbers) => {
-  let evenNums = mixedNumbers.filter((element, index, array) => {
-    return element % 2 === 0
-  })
-  return evenNums
-}
 
-evenFinder(mixedNumbers)
+
 ////////// PROBLEM 2 //////////
 
 // Do not edit the code below.
@@ -130,6 +124,8 @@ const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
   Use a high order method to create to get the sum of bobsTotal.
 */
 
-let bobsTotal //Code Here
-
+const bobsTotal = purchases.reduce((total, purchase) => {    
+  if (purchase.owner == 'Bob') total += purchase.price 
+  return total      
+}, 0)
 
